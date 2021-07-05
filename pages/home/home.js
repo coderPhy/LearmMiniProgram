@@ -1,13 +1,20 @@
 // pages/home/home.js
+//getApp()获取App()产生的实例对象
+const app = getApp();
+// console.log(app.globalData.name);
+// console.log(app.globalData.age);
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
   },
-
+  // 监听按钮的点击
+  handleGetUserInfo(event) {
+    console.log(event.detail.userInfo);
+  },
   /**
    * 生命周期函数--监听页面加载
    */
