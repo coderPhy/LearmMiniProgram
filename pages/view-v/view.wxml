@@ -1,0 +1,18 @@
+<!--pages/view-v/view.wxml-->
+<view class="box">hahhaha</view>
+<view> hehhehe</view>
+
+<!-- 用户按下的时候显示的样式 hover-class-->
+<view class="box1" hover-class="box11" >快快快扩</view>
+
+<!-- 手指松开后点击态保留时间，单位毫秒 hover-stay-time -->
+<view class="box1" hover-class="box11" hover-stay-time="2000">hover-stay-time</view>
+
+<!-- 手指按钮后延迟多久出现点击状态 hover-start-time -->
+<view class="box1" hover-class="box11" hover-start-time="2000">hover-start-time</view>
+
+<!-- 是否阻止本节点的祖先节点出现点击态 hover-stop-propagation -->
+<view class="fubox" hover-class="fuboxhover">
+  FUFUFU
+  <view class="zibox" hover-class="ziboxhover"  hover-stop-propagation>ZIZIZI</view>
+</view>

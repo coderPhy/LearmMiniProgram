@@ -1,0 +1,39 @@
+/* pages/view-v/view.wxss */
+.box {
+  background-color: red;
+}
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.box11 {
+  background-color: firebrick;
+  font-size: 30px;
+}
+
+
+/*  */
+
+
+.fubox {
+  width: 200px;
+  height: 200px;
+  background-color: #0f0;
+}
+
+.fuboxhover {
+  color: white;
+}
+
+.zibox {
+  width: 100px;
+  height: 100px;
+  background-color: #00f;
+}
+
+.ziboxhover {
+  color: white;
+}

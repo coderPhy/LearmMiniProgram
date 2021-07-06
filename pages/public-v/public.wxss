@@ -1,0 +1,8 @@
+/* pages/public-v/public.wxss */
+#haha {
+  color: aquamarine;
+}
+
+.hehe {
+  color:blanchedalmond
+}

@@ -1,5 +1,12 @@
 {
   "pages": [
+    "pages/public-v/public",
+    "pages/scroll/scroll",
+    "pages/input/input",
+    "pages/image-v/image",
+    "pages/view-v/view",
+    "pages/button/button",
+    "pages/text/text",
     "pages/home/home",
     "pages/category/category"
   ],
@@ -14,7 +21,8 @@
   },
   "tabBar": {
     "selectedColor": "#ff5777",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "./assets/tabbar/home.png",

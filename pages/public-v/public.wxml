@@ -1,0 +1,15 @@
+<!--pages/public-v/public.wxml-->
+<text>pages/public-v/public.wxml</text>
+
+<view id="haha">hahah</view>
+<view id="haha">heheh</view>
+
+<view class="hehe">hehe</view>
+<view class="hehe">hehe</view>
+
+<view style="color: aqua;">zizi</view>
+
+<view hidden>看不到</view>
+<view hidden="aa">看不到</view>
+<view hidden="true">看不到</view>
+<view hidden="{{true}}">看不到</view>

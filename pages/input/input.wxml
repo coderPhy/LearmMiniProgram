@@ -1,0 +1,38 @@
+<!--pages/input/input.wxml-->
+<!-- <text>pages/input/input.wxml</text> -->
+<input/>
+
+<!-- value:input的默认值 -->
+<input value="哈哈哈哈"/>
+
+<!-- type:键盘的类型 (英文字母+其他符号/数字/身份证)-->
+<view>text文本输入键盘</view>
+<input type="text"/>
+<view>数字输入键盘</view>
+<input type="number"/>
+<view>身份证输入键盘</view>
+<input type="idcard"/>
+<view>带小数点的数字键盘</view>
+<input type="digit"/>
+<view>密码安全输入键盘</view>
+<input type="safe-password"/>
+
+
+<view>placeholder输入框为空时的占位符</view>
+<input type="text" placeholder="请输入"/>
+
+<view>disabled输入框禁用</view>
+<input type="text" disabled/>
+
+<view>confirm-type设置键盘右下角按钮的文字，仅在type='text'时生效</view>
+<view>发送 搜索 下一个 前往 完成</view>
+<input type="text" confirm-type="send"/>
+<input type="text" confirm-type="search"/>
+<input type="text" confirm-type="next"/>
+<input type="text" confirm-type="go"/>
+<input type="text" confirm-type="done"/>
+
+<view>=========================</view>
+<view>事件监听</view>
+<!-- 监听键盘输入事件bindinput 监听键盘获得焦点bindfocus 监听键盘失去焦点bindblur 监听键盘输入完成按钮的点击bindconfirm   监听键盘高度发生改变事件bindkeyboardheightchange-->
+<input type="text" bindinput="bindinput" bindfocus="bindfocus" bindblur="bindblur" bindconfirm="bindconfirm" bindkeyboardheightchange="bindkeyboardheightchange"/>

@@ -1,0 +1,21 @@
+<!--pages/button/button.wxml-->
+<!-- <text>pages/button/button.wxml</text> -->
+
+<!-- size 按钮大小 -->
+<button>按钮</button>
+<button size="mini">按钮</button>
+<!-- type 按钮类型 -->
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="warn">按钮</button>
+<button size="mini" type="default">按钮</button>
+<!-- plain 镂空效果 -->
+<button size="mini" plain>按钮</button>
+<!-- disabled -->
+<button disabled size="mini">按钮</button>
+<!-- loading -->
+<button loading size="mini">按钮</button>
+<button loading="{{isloading}}" bindtap="buttonClick" size="mini">按钮</button>
+
+<!-- hover-class 按钮点击的时候加上的类名 -->
+<button hover-class='pressed' size="mini">按钮</button>
+<button size="mini">按钮</button>

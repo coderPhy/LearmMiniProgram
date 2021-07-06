@@ -1,0 +1,48 @@
+<!--pages/text/text.wxml-->
+<!-- text 行内元素 -->
+<!-- /n换行 -->
+<text>pages/text/text.wxml\n</text>
+<text>hello text\n</text>
+
+
+<!-- 默认情况text组件中的文本不可以复制 -->
+<!-- selectable 已经废弃 -->
+
+<text selectable="{{true}}">hello\n</text>
+<text selectable="true">Hello Coderwhy\n</text>
+<text selectable>hello hy\n</text>
+
+<!-- selectable="false"无效 selectable="{{false}}"才有效 -->
+<text selectable="false">Hello false\n</text>
+<text selectable="{{false}}">Hello false\n</text>
+
+<!-- 使用user-select替代selectable -->
+<text user-select="true">user-select\n</text>
+<text user-select="{{true}}">user-select\n</text>
+<text user-select>user-select\n</text>
+
+<!-- user-select="false"无效 user-select="{{false}}"才有效 -->
+<text user-select="false">user-select false\n</text>
+<text user-select="{{false}}">user-select false\n</text>
+
+<text>hello haha\n</text>
+<!-- 根据字体设置空格大小 -->
+<text space="nbsp">hello haha\n</text>
+<!-- 中文字符空格一半大小 -->
+<text space="ensp">hello haha\n</text>
+<!-- 中文字符空格大小 -->
+<text space="emsp">hello haha\n</text>
+
+
+
+
+<!-- decode属性：是否解码文本 -->
+
+<text decode="true">5 &gt; 3 \n</text>
+<text decode="{{true}}">5 &gt; 3 \n</text>
+<text decode>5 &gt; 3 \n</text>
+<text decode="false">5 &gt; 3 \n</text>
+
+<text>5 &gt; 3  \n</text>
+<text decode="{{false}}">5 &gt; 3 \n</text>
+

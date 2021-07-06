@@ -1,0 +1,23 @@
+<!--pages/image-v/image.wxml-->
+<text>pages/image-v/image.wxml</text>
+
+<!-- image默认为320*240 -->
+<!-- image为行内块元素 -->
+<!-- 相对路径 -->
+<image src="../../assets/test/cat.jpg"/>
+<!-- 绝对路径 -->
+<image src="/assets/test/cat.jpg"/>
+<!-- 远程路径 -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+
+<!-- 补充:相册图片 -->
+<button bindtap="handleChooseAlbum">上传图片</button>
+<image src="{{imageUrl}}"></image>
+
+<!--  bindload监听图片加载完成  -->
+<!--  lazy-load图片懒加载 在即将进入一定范围（上下三屏）时才开始加载  -->
+<view>===================</view>
+<image wx:for="{{1}}" wx:key="index" src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" bindload="handleImageLoad" lazy-load="true"></image>
+
+<!-- show-menu-by-longpress 开启长按图片显示识别小程序码菜单 在手机中长安,如果不是小程序码不会出现识别小程序 -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" show-menu-by-longpress="true"></image>
