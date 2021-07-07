@@ -1,3 +1,39 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello world</text>
-<button size="mini">按钮</button>
+<!-- 事件处理 -->
+<button size="mini" bindtap="handleBtnClick">按钮</button>
+<button size="mini" bind:tap="handleBtnClick">按钮</button>
+<button size="mini" catch:tap="handleBtnClick">按钮</button>
+
+<!-- 常见的一些事件 -->
+<!-- 手指触摸后，超过350ms再离开，如果指定了事件回调函数并触发了这个事件，tap事件将不被触发 -->
+<view class="box" bind:touchstart="handleTouchStart" bind:touchmove="handleTouchMove" bind:touchend="handleTouchEnd"
+  bind:tap="handleTap" bind:longpress="handleLongpress"></view>
+
+<button size="mini" bind:tap="handleTap">按钮</button>
+
+
+<!-- currentTarget是触发事件的view target是产生事件的view -->
+<view class="outer" id="outer" bind:tap="handleouter">
+  外层的view
+  <view class="inner" id="inner" bind:tap="handleinner">内层的view</view>
+</view>
+
+<!-- 将遍历的元素跟索引传进事件回调函数中通过 data-变量名 在回调函数事件对象中event.target.dataset中可以拿到 -->
+<!-- 当没有事件冒泡跟捕获时event.currentTarget.dataset也可以拿到 -->
+<view class="container">
+  <block wx:for="{{titles}}" wx:key="index" >
+    <view class="item" bind:tap="handleItemClick"
+          data-item="{{item}}" data-index="{{index}}">{{item}}</view>
+  </block>
+</view>
+
+
+<!-- 事件冒泡和事件捕获 catch和bind区别 -->
+<!-- capture-bind:tap监听事件捕获 -->
+<!-- bind: 一层层传递 -->
+<!-- catch: 阻止事件的进一步传递 -->
+<view class="view1" capture-bind:tap="handleCaptureView1" bindtap="handleBindView1">
+  <view class="view2"capture-bind:tap="handleCaptureView2" catchtap="handleBindView2">
+    <view class="view3" capture-bind:tap="handleCaptureView3" bindtap="handleBindView3"></view>
+  </view>
+</view>

@@ -1,4 +1,46 @@
 /* pages/home/home.wxss */
-.title {
-  color: red;
+.box {
+  width: 300rpx;
+  height: 300rpx;
+  background-color: rgb(92, 233, 252);
+}
+
+.outer {
+  width: 400rpx;
+  height: 400rpx;
+  background: rgb(93, 240, 245);
+  color: white;
+}
+
+.inner {
+  width: 200rpx;
+  height: 200rpx;
+  background: rgb(80, 145, 243);
+}
+
+.container {
+  display: flex;
+}
+
+.item {
+  flex: 1;
+  text-align: center;
+}
+
+.view1 {
+  width: 600rpx;
+  height: 600rpx;
+  background-color: rgb(117, 80, 252);
+}
+
+.view2 {
+  width: 400rpx;
+  height: 400rpx;
+  background-color: rgb(80, 252, 252);
+}
+
+.view3 {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: rgb(206, 252, 99);
 }
