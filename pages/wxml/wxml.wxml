@@ -1,0 +1,53 @@
+<!--pages/wxml/wxml.wxml-->
+<!-- <view>Mustache语法</view>
+<view>{{firstName}}</view>
+<view>{{firstName}}  {{lastName}}</view>
+<view>{{firstName + " " + lastName}}</view>
+
+<view>{{age>=18? "成年人" : "未成年人"}}</view> -->
+<view>{{nowTime}}</view>
+<button size="mini" bindtap="btnClick">切换颜色</button>
+<view class="{{isActive?'active':''}}">hahhahh</view>
+
+
+<view>===条件判断===</view>
+<!-- wx:if -->
+<button size="mini" bindtap="handleSwitchShow">按钮</button>
+<view wx:if="{{isShow}}">hahah</view>
+<!-- wx:if wx:elif -->
+<button size="mini" bindtap="scoreAddClick">分数加5</button>
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else>不及格</view>
+
+
+<!-- hidden 与 wx:if 的区别 -->
+<!-- wx:if 创建销毁 不需要经常切换用wx:if-->
+<!-- hidden 隐藏 经常切换用hidden-->
+<view wx:if="{{false}}">wx:if</view>
+<view hidden="{{true}}">hidden</view>
+
+<!-- <view>===列表渲染===</view> -->
+<!--  wx:for -->
+<!-- <view wx:for="{{[20,30,40]}}">{{item}} {{index}}</view>
+<view wx:for="peng">{{item}}</view> -->
+<!-- <view>======================</view> -->
+<!-- <view wx:for="9">{{item}}</view>
+<view wx:for="{{9}}">{{item}}</view> -->
+<!-- <view>======================</view> -->
+<!-- 给index item改名字(嵌套循环时需要) 改名后item index不可用 -->
+<!-- <view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="i">{{movie}} {{i}}</view>
+<block wx:for="{{nums}}" wx:for-item="num">
+  <view wx:for="{{num}}">{{item}}</view>
+  <view>===</view>
+</block> -->
+
+<!-- <view>===block标签===</view> -->
+<!-- block是标签不是组件,用来包裹元素 不会在页面中做任何渲染,只接受控制属性(wx:if wx:for) -->
+<!-- <block>
+  <view>haha</view>
+</block> -->
+
+<!-- 在不使用 wx:key的情况下, 如果 array 内的数据发生改变，则会重新创建每个Item对象然后渲染列表（费时费力）
+在使用 wx:key的情况下，如果array中的数据发生改变，只是将对应的对象重新排序。未发生变化的对象，不会重新创建 -->

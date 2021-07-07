@@ -1,3 +1,40 @@
 <!--pages/home/home.wxml-->
 <text class="title">hello world</text>
 <button size="mini">按钮</button>
+
+<!-- 设置样式的三种方式 -->
+<!-- 内联样式 style -->
+<view style="color: rgb(185, 89, 194);">hahahah</view>
+<!-- 页内样式  页内样式只在当前页面生效,其他页面不生效 -->
+<view class="contianer">heheh</view>
+<!-- 全局样式 如果全局样式跟页内样式都有相同的样式 页内样式优先级高于全局-->
+<view class="contianer">zizi</view>
+<!-- 三种样式优先级 行内>以内>全局 !important最高 -->
+<view style="background-color: red;" class="contianer">nnnnnnn</view>
+
+
+<!-- 在iPhone上,屏幕宽度为375px,共750个物理像素,则750rpx = 375px = 750物理像素 ,1rpx = 0.5px = 1物理像素 其他机型1px = 1物理像素 != 2rpx -->
+<view class="box1"></view>
+<view class="box2"></view>
+<text style="font-size: 40px;">hahaha\n</text>
+<text style="font-size: 80rpx;">hahaha\n</text>
+
+
+<button class="btn">按钮</button>
+
+
+<view class="weui-search-bar {{inputShowed ? 'weui-search-bar_focusing' : ''}}" id="searchBar">
+  <form class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <i class="weui-icon-search"></i>
+      <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}"
+        bindinput="inputTyping" />
+      <span class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"></span>
+    </view>
+    <label class="weui-search-bar__label" bindtap="showInput">
+      <i class="weui-icon-search"></i>
+      <span class="weui-search-bar__text">搜索</span>
+    </label>
+  </form>
+  <view class="weui-search-bar__cancel-btn" bindtap="hideInput">取消</view>
+</view>

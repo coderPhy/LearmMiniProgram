@@ -1,0 +1,6 @@
+@import "./style/btn.wxss";
+@import "./style/weui-searchbar.wxss"
+
+.contianer {
+  background-color: rgb(252, 102, 3) !important; 
+}
