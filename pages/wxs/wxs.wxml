@@ -1,0 +1,43 @@
+<!--pages/wxs/wxs.wxml-->
+<text>pages/wxs/wxs.wxml</text>
+
+<!-- 错误写法 在wxml中是不能直接调用Page/Component中定义的函数的 -->
+<!-- wxml中不能调用js的函数,事件回调除外 -->
+<!-- 这个时候就要使用 wxs -->
+<!-- <view>{{25.22222.toFixed(2)}}</view> -->
+<!-- <view>{{numberToFixed(25.22222)}}</view> -->
+<!-- wxs使用的限制和特点 -->
+<!-- 
+  wxs的运行环境和其他JavaScript代码是隔离的,wxs中不能调用其他JavaScript文件中定义的函数,也不能调用小程序提供的API
+  wxs函数不能作为组件的事件回调
+  由于运行环境的差异,在ios设备上的小程序内的wxs会比JavaScript代码块2-20倍 在Android设备上二者运行效率无差异
+ -->
+
+<!-- wxs的定义方式 -->
+<!-- 方式一 直接在wxml文件中定义 -->
+ <!-- <wxs module="info">
+  var name = "penghuayao";
+  var message = "hello world";
+  var sum = function(num1,num2) {
+    return num1+num2;
+  }
+
+  module.exports={
+    name:name,
+    message:message,
+    sum:sum
+  }
+ </wxs> -->
+
+
+<!-- 方式二 定义在单独的wxs文件中,再使用<wxs>标签进行导入 -->
+<!-- <wxs src="/wxs/info.wxs" module="info"></wxs> -->
+<!-- <wxs src="../../wxs/info.wxs" module="info"></wxs>
+
+<view>{{info.name}}</view>
+<view>{{info.message}}</view>
+<view>{{info.sum(2,3)}}</view> -->
+
+<wxs src="../../wxs/format.wxs" module="format"></wxs>
+<view>{{format.priceFormat(price)}}</view>
+<view>{{format.priceFormat(priceStr)}}</view>

@@ -1,0 +1,21 @@
+<!--pages/wxml/wxml.wxml-->
+<template name="contianer">
+  <button size="mini">{{btnText}}</button>
+  <view>{{content}}</view>
+</template>
+<!-- <import src="/wxml/template.wxml"/> -->
+
+<template is="contianer" data="{{btnText:'按钮',content:'haha'}}"/>
+<template is="contianer" data="{{btnText:'提示',content:'hehe'}}"/>
+
+<!-- 
+  关于wxml的导入有两种方式:
+    import导入:
+      1.主要是导入template
+      2.特点: 不能进行递归导入
+    include引入:
+      1.将公共的wxml中的组件抽取到一个文件中
+      2.特点:不能导入template模板或者wxs,可以进行递归导入
+ -->
+
+

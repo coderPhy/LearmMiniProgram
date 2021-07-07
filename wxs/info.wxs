@@ -1,0 +1,11 @@
+var name = "penghuayao";
+var message = "hello world";
+var sum = function(num1,num2) {
+  return num1+num2;
+}
+
+module.exports={
+  name:name,
+  message:message,
+  sum:sum
+}
