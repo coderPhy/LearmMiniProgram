@@ -1,0 +1,6 @@
+<!--components/my-style/my-style.wxml-->
+<view class="title">style标题</view>
+<view class="content">style内容</view>
+<!-- 自定义组件内的class样式,只对组件wxml内的节点生效,对于引用组件的Page页面不生效 -->
+<!-- 自定义组件中不要使用id选择器,属性选择器,标签选择器,因为有时候不会生效 -->
+<!-- <view class="content" id="box">style内容</view> -->

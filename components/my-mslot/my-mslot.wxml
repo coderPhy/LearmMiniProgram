@@ -1,0 +1,12 @@
+<!--components/my-mslot/my-mslot.wxml-->
+<!-- 定义完要在js文件中定义 -->
+<!-- 
+  options: {
+    multipleSlots: true
+  }
+ -->
+<view>mslot组件的开始</view>
+<view class="slot1"><slot name="slot1"></slot></view>
+<view class="slot2"><slot name="slot2"></slot></view>
+<view class="slot3"><slot name="slot3"></slot></view>
+<view>mslot组件的结束</view>

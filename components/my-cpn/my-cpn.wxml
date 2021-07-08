@@ -1,0 +1,9 @@
+<!--components/my-cpn/my-cpn.wxml-->
+<!-- 自定义组件 -->
+<!-- 在wxml编写自定义组件模板 -->
+<!-- 在wxss中编写自定义组件的样式 -->
+<!-- 在js文件中定义数据或者组件内部的逻辑 -->
+<!-- 在json文件中声明  "component": true -->
+<view class="title">{{title}}</view>
+<view class="content">{{text}}</view>
+<cpn1/>

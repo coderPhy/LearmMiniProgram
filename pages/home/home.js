@@ -5,62 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    counter: 0,
+    isShow: true
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  addCounter(event) {
+    console.log(event.detail);
+    this.setData({
+      counter: this.data.counter + 1
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleItemClick(event) {
+    console.log("home handleItemClick",event.detail.index,event.detail.title);
   },
+  handleIncrementCpn() {
+    // 通过id获取自定义组件对象
+    const sel = this.selectComponent("#sel-id")
+    // 通过class获取自定义组件对象
+    // const sel = this.selectComponent(".sel-class");
+    // 不建议直接修改自定义组件的变量
+    // sel.setData({
+      // counter: sel.data.counter + 1
+    // })
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+    // 使用对外暴露的接口
+    sel.incrementCounter(10);
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  hendleClick() {
+    this.setData({
+      isShow: !this.data.isShow
+    })
   }
-})
+}) 

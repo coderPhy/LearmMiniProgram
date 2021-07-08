@@ -1,3 +1,84 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello world</text>
-<button size="mini">按钮</button>
+<!-- <text class="title">hello world</text>
+<button size="mini">按钮</button> -->
+
+<!-- <view>===自定义组件的基本使用===</view> -->
+<!-- 在需要使用自定义组件的页面json文件中声明 key为组件名 value为组件路径
+  "usingComponents": {"my-cpn": "/components/my-cpn/my-cpn"} -->
+
+<!-- 
+  <my-cpn></my-cpn>
+  <my-cpn/>
+ -->
+
+<!-- 因为wxml节点标签名只能是小写字母,中划线和下划线的组合,所以自定义组件的标签名也只能包含这些字符 -->
+<!-- 自定义组件也是可以引用自定义组件的,引用方法类似于页面引用自定义组件的方式(使用usingComponents字段) -->
+<!-- 自定义组件和页面所在项目根目录名不能以"wx-"为前缀,否则会报错 -->
+<!-- 如果在app.json的usingComponents声明某个组件,那么所有页面和组件可以直接使用该组件 -->
+
+<!-- 自定义组件的样式细节 -->
+<!-- 组件和引用组件的页面不能使用id选择器,属性选择器和标签选择器,只能用class选择器 -->
+<!-- 外部组件使用class选择器的样式,只对外部wxml的class生效,对自定义组件内是不生效的 -->
+<!-- 外部使用id选择器 属性选择器不会对自定义组件内的wxml产生影响 外部使用标签选EQ会对自定义组件内产生影响 -->
+<!-- 
+  <my-style></my-style>
+ -->
+
+<!-- 看自定义组件的my-style.js文件 -->
+<!-- 定义一个options对象,给options对象添加一个styleIsolation属性 -->
+
+
+<!--
+  <view>===给自定义组件传值/样式===</view> 
+-->
+<!-- 通过title将值传递到自定义组件 自定义组件通过properties接收 -->
+<!-- 将当前页面的wxss样式类传递给自定义组件 自定义组件通过externalClasses接收 -->
+<!-- 
+  <my-props title="哈哈哈" titleclass="blue"></my-props>
+  <my-props title="呵呵呵" titleclass="green"></my-props>
+  <my-props titleclass="red"></my-props>
+ -->
+
+<!-- 
+  <view>===组件内部发出事件===</view>
+  <view>当前计数:{{counter}}</view>
+  <my-event bind:increment="addCounter"></my-event>
+ -->
+
+<w-tab-control titles="{{['流行','新款','精选']}}" bind:itemClick="handleItemClick"></w-tab-control>
+
+<!-- 直接修改自定义组件的数据或者调用组件的方法 -->
+<button size="mini" bind:tap="handleIncrementCpn">修改组件内的数据</button>
+<!-- 
+    通过id获取自定义组件对象 this.selectComponent("#sel-id")
+    通过class获取自定义组件对象 this.selectComponent(".sel-class");
+ -->
+<my-sel id="sel-id" class="sel-class"/>
+
+<!-- 插槽的使用 -->
+<!-- <my-slot>
+  <button size="mini">按钮</button>
+</my-slot> -->
+
+<!-- <my-slot>
+  <text>哈哈哈</text>
+</my-slot> -->
+
+<!-- <my-slot>
+  <image src="http://s3.mogucdn.com/mlcdn/c45406/181013_2h6g9elgch8g9fbb17l2ghahdbf19_640x854.jpg"/>
+</my-slot> -->
+
+<!-- <my-slot>
+  <slider></slider>
+</my-slot> -->
+
+<!-- 多个插槽的使用 -->
+<block wx-if="{{isShow}}">
+  <my-mslot>
+    <button slot="slot2" size="mini">插入的按钮</button>
+    <slider slot="slot1"></slider>
+    <text slot="slot3">haha</text>
+  </my-mslot>
+</block>
+
+<button bind:tap="hendleClick">按钮</button>
