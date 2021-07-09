@@ -1,0 +1,9 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+<navigator url="/pages/comment/comment">去评论页</navigator>
+<!-- <navigator url="/pages/home/home" open-type="reLaunch">回到主页</navigator> -->
+<!-- 如果打开当前页面关闭了上一个页面就不能退回去了 -->
+<navigator open-type="navigateBack">返回</navigator>
+
+<button size="mini" bind:tap="handleBackHome">通过js代码回到首页</button>
+
