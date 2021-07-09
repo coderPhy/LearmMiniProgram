@@ -1,4 +1,7 @@
 // pages/home/home.js
+const app = getApp()
+// console.log(app.globalData.TOKEN);
+ 
 Page({
 
   /**
